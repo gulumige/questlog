@@ -1,14 +1,22 @@
 # Questlog
 
+<!-- Badges here -->
+
+[![Vercel](https://img.shields.io/badge/deployed%20on-vercel-blue)](https://questlog-khaki-xi.vercel.app/)
+[![Vite](https://img.shields.io/badge/built%20with-vite-yellowgreen)](https://vitejs.dev/)
+[![React](https://img.shields.io/badge/built%20with-react-blue)](https://reactjs.org/)
+[![TypeScript](https://img.shields.io/badge/built%20with-typescript-blue)](https://www.typescriptlang.org/)
+[![Tailwind CSS](https://img.shields.io/badge/built%20with-tailwindcss-blue)](https://tailwindcss.com/)
+
 A personal game backlog web application built with **React**, **TypeScript**, **Vite**, and **Tailwind CSS**. Track games you want to play, are currently playing, have completed, or dropped — complete with ratings, cover art, and personal notes.
 
 - **Target Grade:** VG
-- **API Handle:** `ditt-handle`
-- **Live Demo:** <https://questlog.vercel.app/gulumige>
+- **API Handle:** `gulumige`
+- **Live Demo:** <https://questlog-khaki-xi.vercel.app/>
 
 ---
 
-## ✨ Features
+## Features
 
 - **Full CRUD Support:** Create new games, browse your backlog, inspect and edit full game details (title, platform, status, rating, cover URL, notes), and delete entries.
 - **Status Filtering:** Filter games by _All_, _Want to play_, _Playing_, _Completed_, and _Dropped_.
@@ -22,7 +30,7 @@ A personal game backlog web application built with **React**, **TypeScript**, **
 1. **Clone the repository:**
 
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/gulumige/questlog.git
    cd questlog
    ```
 
@@ -49,5 +57,5 @@ To keep UI components clean, declarative, and focused strictly on rendering, all
 - **`useSaveGame()`** — Encapsulates all mutating API requests (`POST` to create, `PATCH` to update any combination of `GameChanges` fields, and `DELETE` to remove a game) alongside a shared loading state.
 - **`useLocalStorage(key, initialValue)`** — Synchronizes state with `window.localStorage` so the selected status filter persists across page reloads.
 
-**Why this structure?**
+**Why this structure?**  
 Separating API communication and state management from presentation components eliminates duplicate `fetch` boilerplate, simplifies error handling, and makes the logic easy to maintain and reuse across views.
